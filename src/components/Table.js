@@ -4,20 +4,26 @@ import React from "react";
 
 function Table() {
 
+    /*
     const [description, setDescription] = useState(null)
     const [date, setDate] = useState('')
     const [category, setCategory] = useState('')
     const [amount, setAmount] = useState('')
+    */
+    const [dataa, setDataa] = useState([])
 
   
     useEffect(() => {
       fetch("http://localhost:3000/transactions")
         .then(r => r.json())
         .then((data) => {
+            setDataa(data)
+            /*
             setDescription(data.description);
             setDate(data.date);
             setCategory(data.category);
             setAmount(data.amount);
+            */
             
         })
      }, [])
@@ -31,12 +37,18 @@ function Table() {
                 <th>Category</th>
                 <th>Amount</th>
             </tr>
-            <tr>
-                <td>{date}</td>
-                <td>{description}</td>
-                <td>{category}</td>
-                <td>{amount}</td>
-            </tr>
+            <tbody>
+                {
+                    dataa.map((trans) => {
+                        return <tr key = {trans.id}>
+                            <td>{trans.date}</td>
+                            <td>{trans.description}</td>
+                            <td>{trans.category}</td>
+                            <td>{trans.amount}</td>
+                        </tr>
+                    })
+                }
+            </tbody>
         </table>
     </div>
   );
