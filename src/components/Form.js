@@ -24,6 +24,12 @@ function Form() {
 
 
     }
+
+    // function below deletes the transaction selected by the delete button in Table.js
+    function deleteTrans(id) {
+        const updatedTrans = dataa.filter(dataa => dataa.id !== id)
+        setDataa(updatedTrans)
+    }
     
 
     return (
@@ -66,4 +72,5 @@ function Form() {
     );
 }
 
+export {deleteTrans}
 export default Form

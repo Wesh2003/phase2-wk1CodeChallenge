@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useEffect }from 'react';
+import { deleteTrans } from './Form'
 import React from "react";
 
 function Table() {
 
     const [dataa, setDataa] = useState([]);
 
-  
+    
     useEffect(() => {
       fetch("http://localhost:3000/transactions")
         .then(r => r.json())
@@ -32,6 +33,7 @@ function Table() {
                             <td>{trans.description}</td>
                             <td>{trans.category}</td>
                             <td>{trans.amount}</td>
+                            <button onClick = {() => deleteTrans(trans.id)} >Delete trans</button>
                         </tr>
                     ))
                 }
@@ -41,4 +43,5 @@ function Table() {
   );
 }
 
+export {dataa, setDataa}
 export default Table
