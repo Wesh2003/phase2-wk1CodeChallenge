@@ -7,6 +7,7 @@ function Form() {
     const [category, setCategory] = useState('')
     const [amount, setAmount] = useState('')
 
+    /*
     function duringSubmition(event) {
         event.preventDefault();
         const formData = { 
@@ -17,7 +18,7 @@ function Form() {
         }
         console.log(formData);
     }
-  
+    */
 
     return (
         <form onSubmit={duringSubmition}>
