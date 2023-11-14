@@ -1,5 +1,6 @@
-import useState from 'react';
+import { useState } from 'react';
 import React from "react";
+import { dataa, setDataa } from './Table';
 
 function Form() {
     const [description, setDescription] = useState(null)
@@ -7,18 +8,23 @@ function Form() {
     const [category, setCategory] = useState('')
     const [amount, setAmount] = useState('')
 
-    /*
     function duringSubmition(event) {
         event.preventDefault();
-        const formData = { 
-        date,
-        escription,
-        category,
-        amount,
-        }
-        console.log(formData);
+
+        const newTrans = { 
+        date: date,
+        description: description,
+        category: category,
+        amount: amount
+        };
+
+        const updatedTrans = [...dataa, newTrans]; 
+
+        setDataa(updatedTrans)
+
+
     }
-    */
+    
 
     return (
         <form onSubmit={duringSubmition}>
