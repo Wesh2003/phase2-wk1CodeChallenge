@@ -5,6 +5,7 @@ import Transac from './Transac'
 import '../App.css';
 
 function App() {
+  // code below displays all the data on the screen as the Parent Component
   return (
     <div className="App">
         <Transac />

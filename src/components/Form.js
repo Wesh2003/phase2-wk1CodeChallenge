@@ -3,6 +3,9 @@ import React from "react";
 import { dataa, setDataa } from './Table';
 
 function Form() {
+    // code below displays the form in which one can add a new transcation
+
+    
     const [description, setDescription] = useState(null)
     const [date, setDate] = useState('')
     const [category, setCategory] = useState('')

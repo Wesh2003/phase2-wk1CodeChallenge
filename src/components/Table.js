@@ -5,6 +5,7 @@ import React from "react";
 
 function Table() {
 
+    // Code below displays the contents in the database in a table
     const [dataa, setDataa] = useState([]);
 
     
