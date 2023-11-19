@@ -1,4 +1,4 @@
-# Phase 2- WWeek 1 Code Challenge
+# Phase 2- Week 1 Code Challenge
 
 
 <p> 
